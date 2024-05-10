@@ -28,7 +28,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-  
+
   
 </head>
 
@@ -272,14 +272,14 @@
 
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="index.html">
+        <a class="nav-link collapsed" href="users-profile.html">
           <i class="bi bi-columns-gap"></i>
           <span>Dashboard</span>
         </a>
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="Stock_management.html">
+        <a class="nav-link collapsed" href="users-profile.html">
           <i class="bi bi-journal-bookmark-fill"></i>
           <span>Stock management</span>
         </a>
@@ -319,7 +319,7 @@
     
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="Appointment.html">
+        <a class="nav-link collapsed" href="users-profile.html">
           <i class="bi bi-calendar3"></i>
           <span>Appointments</span>
         </a>
@@ -406,69 +406,10 @@
 
                 
 
-                  <div class="tab-pane fade show active profile-overview" id="profile-overview">
+                <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
-                    <img  src="assets/img/visualization.png" alt="visualization" >
-                  </div>
-                  <div class="tab-pane fade show active profile-overview" id="profile-overview">
-                    <div class="image-container">
-
-                      <img id="selectedImage" src="assets/img/tk100.png" alt="">
-                    </div>
-
-                    <div class="">
-                      <label>
-                          <span class="">Select_X_axis_NAME</span>
-                          <select  name="Select_X_axis_NAME">
-                              <option value="ADD GO AFR">ADD GO AFR</option>
-                              <option value="GASOIL">GASOIL</option>
-                              <option value="MOGAS">MOGAS</option>
-                              <option value="ADD MOG AFR">ADD MOG AFR</option>
-                              <option value="ADD GO OLA">ADD GO OLA</option>
-                              <option value="FUEL OIL">FUEL OIL</option>
-                              <option value="MDO">MDO</option>
-                              <option value="CUTTER STOCK">CUTTER STOCK</option>
-                              <option value="ADD MOG OLA">ADD MOG OLA</option>
-                              <option value="ADD GO TOTAL">ADD GO TOTAL</option>
-                              <option value="ADD MOG TOTAL">ADD MOG TOTAL</option>
-                          </select>
-                      </label>
-                    </div>
-                    <div class="">
-                      <label>
-                          <span class="">Select_Y_axis_CONTAINER_CODE</span>
-                          <select id="imageSelector" name="Select_Y_axis_CONTAINER_CODE">
-                              <option value="tk100">TK-100</option>
-                              <option value="tk101">TK-101</option>
-                              <option value="tk102">TK-102</option>
-                              <option value="tk103">TK-103</option>
-                              <option value="tk104">TK-104</option>
-                              <option value="tk105">TK-105</option>
-                              <option value="tk106">TK-106</option>
-                              <option value="tk200">TK-200</option>
-                              <option value="tk201">TK-201</option>
-                              <option value="tk202">TK-202</option>
-                              <option value="tk203">TK-203</option>
-                              <option value="tk204">TK-204</option>
-                              <option value="tk205">TK-205</option>
-                              <option value="tk206">TK-206</option>
-                              <option value="tk300">TK-300</option>
-                              <option value="tk301">TK-301</option>
-                              <option value="tk302">TK-302</option>
-                              <option value="tk303">TK-303</option>
-                              <option value="tk304">TK-304</option>
-                              <option value="tk305">TK-305</option>
-                              <option value="tk306">TK-306</option>
-                              <option value="tk307">TK-307</option>
-                              <option value="tk400">TK-400</option>
-                              <option value="tk500">TK-500</option>
-                              <option value="tk600">TK-600</option>
-                          </select>
-                      </label>
-                  </div>
-                  
-                  
-                  </div>
+                
+                </div>
 
                 <div class="tab-pane fade pt-3" id="profile-settings">
 
@@ -538,13 +479,7 @@
 </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <script>
-    document.getElementById("imageSelector").addEventListener("change", function() {
-      var selectedValue = this.value;
-      var image = document.getElementById("selectedImage");
-      image.src = "assets/img/" + selectedValue + ".png";
-    });
-</script>
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
