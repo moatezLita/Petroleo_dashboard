@@ -1,0 +1,7688 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.28.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.18.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.24.0"></script>
+</head>
+<body>
+  <div id="vis"/>
+  <script>
+    const spec = {
+  "config": {"view": {"continuousWidth": 400, "continuousHeight": 300}},
+  "data": {"name": "data-9a843821df403a2a53434dc6939354ec"},
+  "mark": "point",
+  "encoding": {
+    "color": {"field": "NAME", "type": "nominal"},
+    "tooltip": [
+      {"field": "NAME", "type": "nominal"},
+      {"field": "CONTAINER_CODE", "type": "nominal"}
+    ],
+    "x": {"field": "NAME", "title": "PRODUCT", "type": "nominal"},
+    "y": {
+      "field": "CONTAINER_CODE",
+      "title": "CONTAINER_CODE",
+      "type": "nominal"
+    }
+  },
+  "selection": {
+    "Select X-axis": {
+      "type": "single",
+      "fields": ["NAME"],
+      "bind": {
+        "input": "select",
+        "options": [
+          "ADD GO AFR",
+          "GASOIL",
+          "MOGAS",
+          "ADD MOG AFR",
+          "ADD GO OLA",
+          "FUEL OIL",
+          "MDO",
+          "CUTTER STOCK",
+          "ADD MOG OLA",
+          "ADD GO TOTAL",
+          "ADD MOG TOTAL",
+          null
+        ]
+      }
+    },
+    "Select Y-axis": {
+      "type": "single",
+      "fields": ["CONTAINER_CODE"],
+      "bind": {
+        "input": "select",
+        "options": [
+          "TK-100",
+          "TK-101",
+          "TK-102",
+          "TK-103",
+          "TK-104",
+          "TK-105",
+          "TK-106",
+          "TK-200",
+          "TK-201",
+          "TK-202",
+          "TK-203",
+          "TK-204",
+          "TK-205",
+          "TK-206",
+          "TK-300",
+          "TK-301",
+          "TK-302",
+          "TK-303",
+          "TK-304",
+          "TK-305",
+          "TK-306",
+          "TK-307",
+          "TK-400",
+          "TK-500",
+          "TK-600",
+          "10113-B-7",
+          "1025-03",
+          "1029-010",
+          "1037-02",
+          "10572-A-68",
+          "1088-02",
+          "1156-02",
+          "11859-A-14",
+          "1199-02",
+          "1386-010",
+          "1426-03",
+          "1433-03",
+          "144-010",
+          "14404-A-60",
+          "1474-03",
+          "1481-02",
+          "1515-04",
+          "1516-04",
+          "152-010",
+          "1575--010",
+          "1576-010",
+          "1584-010",
+          "1676-05",
+          "1749-03",
+          "1763-010",
+          "1800-02",
+          "1800-07",
+          "1802-07",
+          "1809-02",
+          "18102-A-54",
+          "1824-010",
+          "1849--02",
+          "1849-02",
+          "1883-07",
+          "1898-010",
+          "1899-010",
+          "1901-010",
+          "1903-010",
+          "1920-07",
+          "1928-07",
+          "1929-07",
+          "19292-T-6",
+          "19431-B-50",
+          "1953-07",
+          "1953-08",
+          "1980-07",
+          "1986-07",
+          "1992-02",
+          "1993-010",
+          "1993-02",
+          "1993-07",
+          "1994-02",
+          "2005-02",
+          "2006-02",
+          "20316-E-6",
+          "2062-010",
+          "2063-010",
+          "2087-011",
+          "2120--03",
+          "2120-03",
+          "2125-03",
+          "2162-011",
+          "2163-011",
+          "2165-011",
+          "2166-03",
+          "2186-010",
+          "2187-010",
+          "2245-010",
+          "2246-010",
+          "22550-B-7",
+          "226-010",
+          "2282-010",
+          "2284-010",
+          "2292-02",
+          "2307-02",
+          "2333-03",
+          "2334-03",
+          "2414-010",
+          "2474--010",
+          "2474-10",
+          "2486-04",
+          "2503-010",
+          "2504-010",
+          "2511-09",
+          "2529-09",
+          "2531-03",
+          "25550-B-7",
+          "25551-B-7",
+          "256",
+          "260-010",
+          "261-010",
+          "261-09",
+          "2643-09",
+          "26954-A-60",
+          "2700-03",
+          "2710-09",
+          "2727-010",
+          "273-04",
+          "2733-09",
+          "2776-09",
+          "2790-010",
+          "2857-04",
+          "28573-B-7",
+          "2871-010",
+          "2872-010",
+          "2873-010",
+          "2900-010",
+          "2967-09",
+          "2983-04",
+          "3010-010",
+          "3011-010",
+          "3061-010",
+          "3062-010",
+          "309",
+          "31141-A-56",
+          "3184-03",
+          "31843-T-6",
+          "3227-03",
+          "3305-04",
+          "336-09",
+          "3424-010",
+          "3495-03",
+          "3519-04",
+          "35448-B-7",
+          "3578-03",
+          "360-05",
+          "3661-06",
+          "3670-03",
+          "3737-010",
+          "3739-010",
+          "3740-010",
+          "3742-010",
+          "3743-010",
+          "3744-010",
+          "376-011",
+          "378-011",
+          "3787-010",
+          "3788-010",
+          "3789-010",
+          "379-011",
+          "3790-010",
+          "3791-010",
+          "3795-09",
+          "380-011",
+          "3801-09",
+          "382-011",
+          "38549-B-40",
+          "3903-07",
+          "3910--010",
+          "394-010",
+          "41-010",
+          "4102-011",
+          "411-010",
+          "412-010",
+          "413-010",
+          "414-010",
+          "4163-010",
+          "4171-02",
+          "4188-010",
+          "4189-010",
+          "4190-010",
+          "4200-011",
+          "4212-011",
+          "4220-09",
+          "4256-010",
+          "428--010",
+          "428-010",
+          "43-010",
+          "430",
+          "4318-09",
+          "4324-09",
+          "4326-02",
+          "43298-A-14",
+          "4337-09",
+          "4338-09",
+          "4339-09",
+          "4340-09",
+          "4377-010",
+          "4454-010",
+          "4455-010",
+          "44872-A-20",
+          "4495-010",
+          "45-010",
+          "4621-04",
+          "46566-B-7",
+          "4666-09",
+          "4696-09",
+          "470-03",
+          "4707-08",
+          "4711-09",
+          "4818-09",
+          "4845-09",
+          "4871-09",
+          "4878-03",
+          "4955-03",
+          "4958-09",
+          "4959-09",
+          "4960-09",
+          "4961-09",
+          "5031-02",
+          "5035-07",
+          "5038-02",
+          "5048-02",
+          "5053-07",
+          "5063-09",
+          "5067-09",
+          "5068-09",
+          "5070-08",
+          "5071-08",
+          "5084-07",
+          "5085-02",
+          "5088-02",
+          "5102-02",
+          "511-010",
+          "5139-09",
+          "5140-09",
+          "51513-A-13",
+          "5159-09",
+          "5160-09",
+          "518-A-73",
+          "5184-07",
+          "5214-01",
+          "524-09",
+          "525-09",
+          "5379-T-6",
+          "540-04",
+          "549-09",
+          "550-09",
+          "551-09",
+          "5535-05",
+          "5536---05",
+          "5536--005",
+          "5536--05",
+          "5536-005",
+          "5660---05",
+          "5660--05",
+          "5660-05",
+          "5745-09",
+          "575-010",
+          "5804-01",
+          "58339-A-7",
+          "5916-05",
+          "5951-05",
+          "5954-05",
+          "5955-05",
+          "5956-09",
+          "5966-05",
+          "59799-A-13",
+          "5989-05",
+          "6010-05",
+          "603-06",
+          "6034-07",
+          "6036-05",
+          "604-04",
+          "6041-05",
+          "6042-05",
+          "6076-02",
+          "6083-02",
+          "6083-04",
+          "6084-04",
+          "610-06",
+          "6124-02",
+          "6127-02",
+          "6128-02",
+          "6128-09",
+          "6129-09",
+          "6131-02",
+          "6152-08",
+          "6157-02",
+          "6157-05",
+          "6157-08",
+          "6181--03",
+          "6185-02",
+          "619-06",
+          "6226-08",
+          "6263-09",
+          "6270-05",
+          "6287-09",
+          "6291-02",
+          "6292-05",
+          "630-06",
+          "6312-09",
+          "633-06",
+          "6336-05",
+          "6338-09",
+          "6348-02",
+          "6353-02",
+          "6355-02",
+          "6359-05",
+          "636-06",
+          "6369--05",
+          "6373-02",
+          "6419-05",
+          "6420-09",
+          "6421-09",
+          "644-06",
+          "645-06",
+          "6453-05",
+          "647-06",
+          "64702-A-7",
+          "64703-A-7",
+          "651-06",
+          "6539-A-56",
+          "6563-09",
+          "6564-09",
+          "6565-09",
+          "659-06",
+          "6600-09",
+          "6620-09",
+          "6644-05",
+          "6645-05",
+          "6646-05",
+          "6691-09",
+          "6727-05",
+          "6728-05",
+          "6730-05",
+          "6731-05",
+          "67359-A-13",
+          "6742-05",
+          "6756-05",
+          "6757-05",
+          "6770-05",
+          "6771-05",
+          "6772-05",
+          "6773-05",
+          "6777-05",
+          "6778--05",
+          "6783-05",
+          "6785-05",
+          "6821-01",
+          "6821-09",
+          "685-09",
+          "6854-01",
+          "68635-A-13",
+          "6866-05",
+          "6867-05",
+          "687-09",
+          "6874-01",
+          "688-09",
+          "6887-05",
+          "6888-05",
+          "689-009",
+          "689-09",
+          "6891-05",
+          "6892-05",
+          "6893-05",
+          "6906-05",
+          "6907-05",
+          "6908-05",
+          "691-05",
+          "6918-05",
+          "6919-05",
+          "6966-09",
+          "6967-09",
+          "6968-09",
+          "6969-09",
+          "6970-09",
+          "6971-09",
+          "6974-A-75",
+          "698-09",
+          "699-09",
+          "700-09",
+          "7023-05",
+          "7031-09",
+          "7032-09",
+          "7033-09",
+          "7034-09",
+          "7035-09",
+          "7036-08",
+          "7036-09",
+          "7037-08",
+          "7038-08",
+          "7085-B-59",
+          "71-010",
+          "7110-05",
+          "7112-05",
+          "7124-05",
+          "7130-05",
+          "7131-05",
+          "7132-05",
+          "7134-05",
+          "7139-05",
+          "7149-08",
+          "7150-09",
+          "7151-08",
+          "7151-09",
+          "7152-09",
+          "7153-09",
+          "7171-05",
+          "7188-08",
+          "7201-05",
+          "7215-05",
+          "7221-05",
+          "7225-05",
+          "723-09",
+          "7233-08",
+          "725-09",
+          "7254-05",
+          "7255-05",
+          "7256-05",
+          "7257-05",
+          "726-09",
+          "7296-02",
+          "73003-A-13",
+          "733-03",
+          "7337-05",
+          "7360-B-7",
+          "7370-05",
+          "73862-A-13",
+          "73889-A-13",
+          "7407-05",
+          "7412-05",
+          "7419-005",
+          "7419-05",
+          "7427-09",
+          "745-04",
+          "7472-09",
+          "75226-A-13",
+          "75227-A-13",
+          "7523-08",
+          "7524-08",
+          "7525-08",
+          "7526-08",
+          "7527-08",
+          "7537-07",
+          "7555-08",
+          "7556-08",
+          "7558-08",
+          "7559-08",
+          "7573-08",
+          "7574-08",
+          "7575-08",
+          "7577-08",
+          "7578-08",
+          "7579-08",
+          "7581-08",
+          "7597-09",
+          "7598-09",
+          "7599-09",
+          "761-06",
+          "7651-07",
+          "7652-07",
+          "766-04",
+          "7673-08",
+          "7696-04",
+          "7696-08",
+          "772-04",
+          "7735-04",
+          "7736-04",
+          "7762-04",
+          "7766-09",
+          "7771-09",
+          "7840-08",
+          "78502-e-6",
+          "7935-09",
+          "7963-09",
+          "798-06",
+          "7991-B-20",
+          "802-06",
+          "803-06",
+          "80755-B-40",
+          "8142-04",
+          "8190-02",
+          "8223-09",
+          "8263-09",
+          "828-04",
+          "829-04",
+          "8294-09",
+          "8361-08",
+          "8431-04",
+          "8453-04",
+          "8463-08",
+          "8464-08",
+          "8470-08",
+          "84833-B-40",
+          "8495-04",
+          "85265-A-40",
+          "8538-04",
+          "85469-A-59",
+          "8597-05",
+          "8598-05",
+          "8616-04",
+          "86719-A-59",
+          "8714-09",
+          "879-03",
+          "88423-A-59",
+          "8961-04",
+          "90-02",
+          "9018-08",
+          "9120-04",
+          "9127-04",
+          "9154-03",
+          "9302-03",
+          "9307-03",
+          "93424-A-7",
+          "9366-04",
+          "9369-04",
+          "9416-04",
+          "9472-01",
+          "9472-04",
+          "9527-04",
+          "9593-03",
+          "9598-04",
+          "9620-04",
+          "9633-03",
+          "964-010",
+          "9648-03",
+          "9663-03",
+          "9692-04",
+          "96989-A-20",
+          "974-08",
+          "9757-04",
+          "9794-03",
+          "98-03",
+          "9819-03",
+          "98278-A-7",
+          "9867-04",
+          "9959-04",
+          "9960-04",
+          "1025- 03",
+          "1030-010",
+          "1036-010",
+          "1037-010",
+          "1038-010",
+          "1039-010",
+          "104-08",
+          "1040-010",
+          "1074-010",
+          "1075-010",
+          "1081-010",
+          "1090-010",
+          "1091-010",
+          "1099-03",
+          "114-05",
+          "1147-010",
+          "1184-03",
+          "1190-010",
+          "1223-010",
+          "1224-010",
+          "1225-010",
+          "1239-010",
+          "1240- 010",
+          "1240-010",
+          "1242-010",
+          "1243-010",
+          "1244-010",
+          "1263-010",
+          "1264-010",
+          "1265-010",
+          "1270-03",
+          "1348-03",
+          "1351-03",
+          "1357-03",
+          "1362-03",
+          "1389",
+          "1389-010",
+          "1420-010",
+          "1421-010",
+          "1429-03",
+          "1434-03",
+          "1438-03",
+          "1458-03",
+          "1470-010",
+          "1471-010",
+          "1476-03",
+          "1479-010",
+          "1479-03",
+          "1480-010",
+          "1548-010",
+          "1549-010",
+          "1583-010",
+          "1708-010",
+          "1780-05",
+          "1862-010",
+          "203-02",
+          "2095-011",
+          "2123-03",
+          "2292-010",
+          "2293-010",
+          "2314-010",
+          "2315- 010",
+          "2315-010",
+          "241-03",
+          "2424-010",
+          "2638-09",
+          "2703-09",
+          "2710- 09",
+          "278-04",
+          "2962-09",
+          "3046-010",
+          "3083-010",
+          "3084-010",
+          "3095-09",
+          "3185-01",
+          "3331-09",
+          "3585-010",
+          "3586-010",
+          "3599-01",
+          "386-05",
+          "3865-08",
+          "4025-01",
+          "4038-01",
+          "4090-02",
+          "4117-01",
+          "4122-02",
+          "4194-01",
+          "421",
+          "4314-09",
+          "433-03",
+          "4457-01",
+          "4566-09",
+          "4633-01",
+          "4704-09",
+          "4999-03",
+          "5055- 09",
+          "5055-09",
+          "5122-01",
+          "5238-01",
+          "5290-09",
+          "5342-09",
+          "5422-01",
+          "5527-01",
+          "5989-09",
+          "6032-01",
+          "6037-02",
+          "6122- 01",
+          "6122-01",
+          "6149-01",
+          "6155-01",
+          "6160-09",
+          "6211-01",
+          "628-03",
+          "6327-01",
+          "6472- 01",
+          "6472-01",
+          "651-03",
+          "6639-01",
+          "6640-01",
+          "6645-01",
+          "665-03",
+          "666-03",
+          "6779-05",
+          "6780-05",
+          "6781-05",
+          "6858-01",
+          "6860-01",
+          "6862-01",
+          "69-03",
+          "7167-05",
+          "7168-05",
+          "7169-05",
+          "7172-05",
+          "7174-05",
+          "7176- 01",
+          "7176-01",
+          "7176-05",
+          "7177-05",
+          "7178-05",
+          "7181-05",
+          "7182-01",
+          "7185-05",
+          "7194-05",
+          "7196-05",
+          "7279-01",
+          "7289-05",
+          "7290-05",
+          "7291-05",
+          "7367-09",
+          "7368-09",
+          "7369-09",
+          "7370-09",
+          "7371-09",
+          "7386-09",
+          "7387-09",
+          "7388-09",
+          "7389-09",
+          "7390-09",
+          "7392-09",
+          "7406-05",
+          "7414-05",
+          "7482-05",
+          "7582-04",
+          "7620-04",
+          "7656-09",
+          "77- 08",
+          "7700-04",
+          "7842-04",
+          "7889-01",
+          "8012-01",
+          "8050-01",
+          "8112-01",
+          "8140-04",
+          "8268-04",
+          "8313-04",
+          "834",
+          "8346-04",
+          "8404-04",
+          "8504-04",
+          "8689-04",
+          "8721-01",
+          "9055-04",
+          "9115-03",
+          "9126-04",
+          "913-03",
+          "917-03",
+          "9255-04",
+          "9298-04",
+          "9303-03",
+          "9332-03",
+          "9387- 04",
+          "9389-03",
+          "9399-03",
+          "9408-03",
+          "9447-04",
+          "951-03",
+          "9571-04",
+          "9578-04",
+          "963-010",
+          "9638- 04",
+          "9638-04",
+          "972-03",
+          "977-010",
+          "978-010",
+          "979-07",
+          "980-03",
+          "9818-03",
+          "988-010",
+          "989-010",
+          "990-010",
+          "991-010",
+          "T123"
+        ]
+      }
+    }
+  },
+  "transform": [
+    {"filter": "(datum.NAME !== null)"},
+    {"filter": {"selection": "Select X-axis"}},
+    {"filter": {"selection": "Select Y-axis"}}
+  ],
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json",
+  "datasets": {
+    "data-9a843821df403a2a53434dc6939354ec": [
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-100",
+        "CONTAINER_TYPE": 1,
+        "NAME": "ADD GO AFR",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-101",
+        "CONTAINER_TYPE": 1,
+        "NAME": "GASOIL",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-102",
+        "CONTAINER_TYPE": 1,
+        "NAME": "GASOIL",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-103",
+        "CONTAINER_TYPE": 1,
+        "NAME": "GASOIL",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-104",
+        "CONTAINER_TYPE": 1,
+        "NAME": "GASOIL",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-105",
+        "CONTAINER_TYPE": 1,
+        "NAME": "MOGAS",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-106",
+        "CONTAINER_TYPE": 1,
+        "NAME": "MOGAS",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-200",
+        "CONTAINER_TYPE": 1,
+        "NAME": "ADD MOG AFR",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-201",
+        "CONTAINER_TYPE": 1,
+        "NAME": "MOGAS",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-202",
+        "CONTAINER_TYPE": 1,
+        "NAME": "MOGAS",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-203",
+        "CONTAINER_TYPE": 1,
+        "NAME": "GASOIL",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-204",
+        "CONTAINER_TYPE": 1,
+        "NAME": "GASOIL",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-205",
+        "CONTAINER_TYPE": 1,
+        "NAME": "GASOIL",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-206",
+        "CONTAINER_TYPE": 1,
+        "NAME": "GASOIL",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-300",
+        "CONTAINER_TYPE": 1,
+        "NAME": "ADD GO OLA",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-301",
+        "CONTAINER_TYPE": 1,
+        "NAME": "FUEL OIL",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-302",
+        "CONTAINER_TYPE": 1,
+        "NAME": "MDO",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-303",
+        "CONTAINER_TYPE": 1,
+        "NAME": "CUTTER STOCK",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-304",
+        "CONTAINER_TYPE": 1,
+        "NAME": "FUEL OIL",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-305",
+        "CONTAINER_TYPE": 1,
+        "NAME": "FUEL OIL",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-306",
+        "CONTAINER_TYPE": 1,
+        "NAME": "FUEL OIL",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-307",
+        "CONTAINER_TYPE": 1,
+        "NAME": "FUEL OIL",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-400",
+        "CONTAINER_TYPE": 1,
+        "NAME": "ADD MOG OLA",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-500",
+        "CONTAINER_TYPE": 1,
+        "NAME": "ADD GO TOTAL",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 0,
+        "CONTAINER_CODE": "TK-600",
+        "CONTAINER_TYPE": 1,
+        "NAME": "ADD MOG TOTAL",
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "10113-B-7",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1025-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1029-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1037-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "10572-A-68",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1088-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1156-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "11859-A-14",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1199-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1386-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1426-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1433-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "144-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "14404-A-60",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1474-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1481-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1515-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1516-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "152-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1575--010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1576-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1584-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1676-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1749-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1763-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1800-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1800-07",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1802-07",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1809-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "18102-A-54",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1824-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1849--02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1849-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1883-07",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1898-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1899-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1901-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1903-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1920-07",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1928-07",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1929-07",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "19292-T-6",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "19431-B-50",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1953-07",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1953-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1980-07",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1986-07",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1992-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1993-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1993-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1993-07",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "1994-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2005-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2006-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "20316-E-6",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2062-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2063-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2087-011",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2120--03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2120-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2125-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2162-011",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2163-011",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2165-011",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2166-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2186-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2187-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2245-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2246-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "22550-B-7",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "226-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2282-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2284-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2292-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2307-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2333-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2334-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2414-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2474--010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2474-10",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2486-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2503-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2504-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2511-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2529-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2531-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "25550-B-7",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "25551-B-7",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "256",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "260-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "261-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "261-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2643-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "26954-A-60",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2700-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2710-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2727-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "273-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2733-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2776-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2790-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2857-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "28573-B-7",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2871-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2872-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2873-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2900-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2967-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "2983-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3010-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3011-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3061-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3062-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "309",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "31141-A-56",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3184-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "31843-T-6",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3227-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3305-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "336-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3424-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3495-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3519-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "35448-B-7",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3578-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "360-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3661-06",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3670-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3737-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3739-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3740-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3742-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3743-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3744-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "376-011",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "378-011",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3787-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3788-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3789-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "379-011",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3790-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3791-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3795-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "380-011",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3801-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "382-011",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "38549-B-40",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3903-07",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "3910--010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "394-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "41-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4102-011",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "411-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "412-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "413-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "414-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4163-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4171-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4188-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4189-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4190-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4200-011",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4212-011",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4220-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4256-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "428--010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "428-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "43-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "430",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4318-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4324-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4326-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "43298-A-14",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4337-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4338-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4339-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4340-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4377-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4454-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4455-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "44872-A-20",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4495-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "45-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4621-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "46566-B-7",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4666-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4696-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "470-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4707-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4711-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4818-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4845-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4871-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4878-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4955-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4958-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4959-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4960-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "4961-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5031-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5035-07",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5038-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5048-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5053-07",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5063-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5067-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5068-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5070-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5071-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5084-07",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5085-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5088-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5102-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "511-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5139-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5140-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "51513-A-13",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5159-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5160-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "518-A-73",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5184-07",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5214-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "524-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "525-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5379-T-6",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "540-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "549-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "550-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "551-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5535-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5536---05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5536--005",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5536--05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5536-005",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5660---05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5660--05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5660-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5745-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "575-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5804-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "58339-A-7",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5916-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5951-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5954-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5955-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5956-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5966-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "59799-A-13",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "5989-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6010-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "603-06",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6034-07",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6036-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "604-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6041-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6042-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6076-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6083-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6083-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6084-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "610-06",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6124-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6127-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6128-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6128-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6129-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6131-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6152-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6157-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6157-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6157-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6181--03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6185-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "619-06",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6226-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6263-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6270-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6287-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6291-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6292-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "630-06",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6312-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "633-06",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6336-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6338-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6348-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6353-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6355-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6359-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "636-06",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6369--05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6373-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6419-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6420-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6421-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "644-06",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "645-06",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6453-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "647-06",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "64702-A-7",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "64703-A-7",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "651-06",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6539-A-56",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6563-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6564-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6565-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "659-06",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6600-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6620-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6644-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6645-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6646-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6691-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6727-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6728-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6730-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6731-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "67359-A-13",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6742-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6756-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6757-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6770-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6771-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6772-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6773-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6777-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6778--05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6783-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6785-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6821-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6821-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "685-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6854-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "68635-A-13",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6866-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6867-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "687-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6874-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "688-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6887-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6888-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "689-009",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "689-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6891-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6892-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6893-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6906-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6907-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6908-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "691-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6918-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6919-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6966-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6967-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6968-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6969-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6970-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6971-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "6974-A-75",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "698-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "699-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "700-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7023-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7031-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7032-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7033-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7034-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7035-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7036-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7036-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7037-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7038-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7085-B-59",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "71-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7110-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7112-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7124-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7130-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7131-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7132-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7134-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7139-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7149-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7150-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7151-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7151-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7152-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7153-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7171-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7188-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7201-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7215-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7221-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7225-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "723-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7233-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "725-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7254-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7255-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7256-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7257-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "726-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7296-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "73003-A-13",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "733-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7337-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7360-B-7",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7370-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "73862-A-13",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "73889-A-13",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7407-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7412-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7419-005",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7419-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7427-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "745-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7472-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "75226-A-13",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "75227-A-13",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7523-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7524-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7525-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7526-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7527-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7537-07",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7555-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7556-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7558-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7559-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7573-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7574-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7575-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7577-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7578-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7579-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7581-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7597-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7598-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7599-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "761-06",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7651-07",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7652-07",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "766-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7673-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7696-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7696-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "772-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7735-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7736-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7762-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7766-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7771-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7840-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "78502-e-6",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7935-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7963-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "798-06",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "7991-B-20",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "802-06",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "803-06",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "80755-B-40",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "8142-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "8190-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "8223-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "8263-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "828-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "829-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "8294-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "8361-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "8431-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "8453-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "8463-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "8464-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "8470-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "84833-B-40",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "8495-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "85265-A-40",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "8538-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "85469-A-59",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "8597-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "8598-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "8616-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "86719-A-59",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "8714-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "879-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "88423-A-59",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "8961-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "90-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9018-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9120-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9127-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9154-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9302-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9307-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "93424-A-7",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9366-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9369-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9416-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9472-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9472-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9527-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9593-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9598-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9620-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9633-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "964-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9648-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9663-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9692-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "96989-A-20",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "974-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9757-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9794-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "98-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9819-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "98278-A-7",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9867-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9959-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 1,
+        "CONTAINER_CODE": "9960-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1025- 03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1029-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1030-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1036-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1037-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1038-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1039-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "104-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1040-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1074-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1075-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1081-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1090-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1091-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1099-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "114-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1147-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1184-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1190-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1223-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1224-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1225-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1239-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1240- 010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1240-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1242-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1243-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1244-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1263-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1264-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1265-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1270-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1348-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1351-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1357-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1362-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1389",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1389-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1420-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1421-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1429-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1434-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1438-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1458-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1470-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1471-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1476-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1479-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1479-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1480-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1548-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1549-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1583-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1708-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1780-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "1862-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "203-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "2095-011",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "2123-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "2292-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "2293-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "2314-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "2315- 010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "2315-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "241-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "2424-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "2638-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "2703-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "2710- 09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "278-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "2962-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "3046-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "3083-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "3084-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "3095-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "3185-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "3331-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "3585-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "3586-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "3599-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "386-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "3865-08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "4025-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "4038-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "4090-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "4117-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "4122-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "4194-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "421",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "4314-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "433-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "4457-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "4566-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "4633-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "4704-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "4999-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "5055- 09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "5055-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "5122-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "5238-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "5290-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "5342-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "5422-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "5527-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "5989-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "6032-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "6037-02",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "6122- 01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "6122-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "6149-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "6155-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "6160-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "6211-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "628-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "6327-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "6472- 01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "6472-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "651-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "6639-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "6640-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "6645-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "665-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "666-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "6779-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "6780-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "6781-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "6858-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "6860-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "6862-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "69-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7167-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7168-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7169-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7171-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7172-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7174-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7176- 01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7176-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7176-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7177-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7178-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7181-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7182-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7185-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7194-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7196-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7279-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7289-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7290-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7291-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7367-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7368-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7369-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7370-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7371-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7386-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7387-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7388-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7389-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7390-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7392-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7406-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7407-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7414-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7482-05",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7582-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7620-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7656-09",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "77- 08",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7700-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7762-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7842-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "7889-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "8012-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "8050-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "8112-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "8140-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "8268-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "8313-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "834",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "8346-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "8404-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "8504-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "8689-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "8721-01",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "9055-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "9115-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "9126-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "913-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "917-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "9255-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "9298-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "9303-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "9332-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "9387- 04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "9389-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "9399-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "9408-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "9416-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "9447-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "951-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "9571-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "9578-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "963-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "9638- 04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "9638-04",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "964-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "972-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "977-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "978-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "979-07",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "980-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "9818-03",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "988-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "989-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "990-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "991-010",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      },
+      {
+        "OWNER_ID": 2,
+        "CONTAINER_CODE": "T123",
+        "CONTAINER_TYPE": 2,
+        "NAME": null,
+        "SHELL_FULL_CAPACITY": 0,
+        "TARE_WEIGHT": 0,
+        "MAX_WEIGHT": 0
+      }
+    ]
+  }
+};
+    vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  </script>
+</body>
+</html>
